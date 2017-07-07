@@ -1,0 +1,47 @@
+// Card Component
+
+
+
+
+// Options
+
+$iota-components-card            		: true;
+
+$iota-components-card-namespace  		: 'card' !default;
+
+$iota-components-card-color      		: rgb(0, 0, 0) !default;
+$iota-components-card-margin     		: 0 !default;
+$iota-components-card-padding    		: $iota-global-gutter-default !default;
+$iota-components-card-border     		: none !default;
+$iota-components-card-background 		: rgb(255, 255, 255) !default;
+$iota-components-card-box-shadow 		: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+$iota-components-card-border-radius : 4px;
+
+
+
+
+// Helper Local Variables
+
+$iota-components-card-var-card: $iota-global-components-namespace + $iota-components-card-namespace;
+
+
+
+
+// Card Component
+
+.#{$iota-components-card-var-card} {
+  display: flex;
+  @include _iota-generate-unit('margin', null, $iota-components-button-margin);
+  @include _iota-generate-unit('padding', null, $iota-components-button-padding);
+  font: inherit;
+  color: $iota-components-card-color;
+  white-space: nowrap;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  border: $iota-components-card-border;
+  text-decoration: none;
+  background: $iota-components-card-background;
+	box-shadow: $iota-components-card-box-shadow;
+	border-radius: $iota-components-card-border-radius;
+}
